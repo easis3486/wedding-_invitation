@@ -142,7 +142,7 @@
 
 <!-- Секция цветовой палитры -->
 <section class="section color-palette">
-  <img src="2.jpeg" alt="Фото цветовой палитры">
+  <img src="3.jpeg" alt="Фото цветовой палитры">
 </section>
 
 <!-- Секция анкетирования -->
@@ -174,15 +174,18 @@
     <input type="checkbox" name="family" value="5"> 5<br>
     <input type="checkbox" name="family" value="6"> 6<br><br>
 
+    <label>Планируете ли прийти на второй день?</label>
+    <input type="checkbox" name="child" value="Да"> Да<br>
+    <input type="checkbox" name="child" value="Нет"> Нет<br><br>
+
     <button type="submit">Отправить</button>
   </form>
 </section>
 
 
-
 <script>
-  // Таймер до свадьбы
-  const weddingDate = new Date("March 1, 2025 17:00:00").getTime();
+  // Таймер до свадьбы с учетом Омского времени (+3 часа к МСК)
+  const weddingDate = new Date("March 1, 2025 17:00:00").getTime() - (3 * 60 * 60 * 1000); // Смещение Омского времени
 
   function updateTimer() {
     const now = new Date().getTime();
